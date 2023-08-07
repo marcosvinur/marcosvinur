@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!--
+Objetivo: Cadastro de Pessoa Física
+Autor: Marcos Vinícius Nunes Reis - AI-APW-01
+Data: 21/07/2023
+//-->
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Cadastro de Pessoa Fisica</title>
+        <link rel="icon" href="favicon/favicon.ico">
+    </head>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12pt;
+        }
+    </style>
+    <body>
+        <a href="index.html">Página Inicial</a><br>
+        Início / 
+        <a href="frm04.html">Próximo</a><br>
+        <h1 align="center">Cadastro de Pessoa Física</h1>
+        <p align="justify">Olá. Estamos prestes a realizar o seu cadastro.<br>Por favor, preencha seus DADOS PESSOAIS.</p>
+            <h2 >Dados Pessoais</h2>
+                <form name="frm03" id="frm03" method="POST" action="frm03.html">
+                    <table>
+                    <tr>
+                        <td><label for="frmcpf">CPF</label></td>
+                        <td><input tabindex="1" type="text" size="30" name="frmcpf" id="frmcpf" maxlength="14"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="frmname">Nome</label></td>
+                        <td><input tabindex="2" type="text" size="30" name="frmname" id="frmname"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="frmdate">Data de Nascimento</label></td>
+                        <td><input tabindex="3" type="date" id="frmdate" name="frmdate"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="frmsex">Sexo</label></td>
+                        <td><input tabindex="4" type="radio" id="frmsex1" name="frmsex" value="F">Feminino
+                        <input tabindex="5" type="radio" id="frmsex2" name="frmsex" value="M">Masculino</td>
+                    </tr>
+                    <tr>
+                        <td><label for="frmnac">Nacionalidade</label></td>
+                        <td><input tabindex="6" type="text" size="30" name="frmnac" id="frmnac"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="frmnat">Naturalidade</label></td>
+                        <td><input tabindex="7" type="text" size="30" name="frmnat" id="frmnat"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="frmstat">Estado Civil</label></td>
+                        <td><input tabindex="8" type="radio" id="frmstat1" name="frmstat" value="C">Casado
+                        <input tabindex="9" type="radio" id="frmstat2" name="frmstat" value="O">Solteiro
+                        <input tabindex="10" type="radio" id="frmstat3" name="frmstat" value="U">União Estável
+                        <input tabindex="11" type="radio" id="frmstat4" name="frmstat" value="S">Separado</td>
+                    </tr>
+                    </table>
+                    <table>
+            <h2>Dados de Localização</h2>
+                    <tr>
+                        <td><label for="frmcep">CEP</label></td>
+                        <td><input tabindex="12" type="text" id="frmcep" name="frmcep" size="22"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="frmstr">Rua</label></td>
+                        <td><input tabindex="13" type="text" id="frmstr" name="frmstr" size="22"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="frmnum">Número</label></td>
+                        <td><input tabindex="14" type="text" id="frmnum" name="frmnum" size="22"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="frmcom">Complemento</label></td>
+                        <td><input tabindex="15" type="text" id="frmcom" name="frmcom" size="22"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="frmnbhd">Bairro</label></td>
+                        <td><input tabindex="16" type="text" id="frmnbhd" name="frmnbhd" size="22"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="frmcity">Cidade</label></td>
+                        <td><input tabindex="17" type="text" id="frmcity" name="frmcity" size="22"></td>
+                    </tr>
+                    <tr>
+                    <td><label for="frm_uf">Estado</label></td>
+                    <td><select tabindex="18" id="frm_uf" name="frm_uf" autocomplete="on" style="width: 191px;">
+                        <option value="" style="color:gray">Selecionar</option>
+                        <option value="AC">Acre (AC)</option>
+                        <option value="AL">Alagoas (AL)</option>
+                        <option value="AP">Amapá (AP)</option>
+                        <option value="AM">Amazonas (AM)</option>
+                        <option value="BA">Bahia (BA)</option>
+                        <option value="CE">Ceará (CE)</option>
+                        <option value="DF">Distrito Federal (DF)</option>
+                        <option value="ES">Espírito Santo (ES)</option>
+                        <option value="GO">Goiás (GO)</option>
+                        <option value="MA">Maranhão (MA)</option>
+                        <option value="MT">Mato Grosso (MT)</option>
+                        <option value="MS">Mato Grosso do Sul (MS)</option>
+                        <option value="MG">Minas Gerais (MG)</option>
+                        <option value="PA">Pará (PA)</option>
+                        <option value="PB">Paraíba (PB)</option>
+                        <option value="PR">Paraná (PR)</option>
+                        <option value="PE">Pernambuco (PE)</option>
+                        <option value="PI">Piauí (PI)</option>
+                        <option value="RJ">Rio de Janeiro (RJ)</option>
+                        <option value="RN">Rio Grande do Norte (RN)</option>
+                        <option value="RS">Rio Grande do Sul (RS)</option>
+                        <option value="RO">Rondônia (RO)</option>
+                        <option value="RR">Roraima (RR)</option>
+                        <option value="SC">Santa Catarina (SC)</option>
+                        <option value="SE">Sergipe (SE)</option>
+                        <option value="SP">São Paulo (SP)</option>
+                        <option value="TO">Tocantins (TO)</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input tabindex="19" type="submit" value="Enviar"/>
+                            <input tabindex="20" type="reset" value="Limpar"/>
+                        </td>
+                    </tr>
+                    </table>
+                </form>
+    </body>
+</html>

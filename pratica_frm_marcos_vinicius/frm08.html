@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+Objetivo: Cadastro de Pessoa Jurídica
+Autor: Marcos Vinícius Nunes Reis - AI-APW-01
+Data: 21/07/2023
+//-->
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Cadastro de Pessoa Jurídica</title>
+        <link rel="icon" href="favicon/favicon.ico">
+    </head>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12pt;
+        }
+    </style>
+    <body>
+        <a href="index.html">Página Inicial</a><br>
+        <a href="frm07.html">Anterior</a>
+        /
+        <a href="frm12.html">Próximo</a><br>
+        <h1 align="center">Cadastro de Pessoa Jurídica</h1>
+        <p align="justify">Olá. Estamos prestes a realizar o seu cadastro.<br>Por favor, preencha seus DADOS PESSOAIS.</p>
+            <h2>Dados Jurídicos</h2>
+                <form name="frm08" id="frm08" method="POST" action="frm08.html">
+                    <table>
+                    <tr>
+                        <td><label for="frmcnpj">CNPJ</label></td>
+                        <td><input tabindex="1" type="text" size="34" name="frmcnpj" id="frmcnpj" maxlength="14"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="frmname">Nome Fantasia</label></td>
+                        <td><input tabindex="2" type="text" size="34" name="frmname" id="frmname"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="frmcorp">Razão Social</label></td>
+                        <td><input tabindex="3" type="text" size="34" id="frmcorp" name="frmcorp"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="frmIE">Inscrição Estadual</label></td>
+                        <td><input tabindex="4" type="number" style="width: 267px;" id="frmIE" name="frmIE" placeholder="Inscrição da Empresa no Estado"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="frmIM">Inscrição Municipal</label></td>
+                        <td><input tabindex="5" type="number" style="width: 267px;" id="frmIM" name="frmIM" placeholder="Inscrição da Empresa no Município"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="frmval">Capital Social</label></td>
+                        <td><input tabindex="6" type="number" style="width: 267px;" id="frmval" name="frmval" placeholder="Valor aportado pelos sócios"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="frmqnt">Quantidade de Sócios</label></td>
+                        <td><input tabindex="7" type="text" size="34" id="frmqnt" name="frmqnt"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="frmsoc">Sócio Responsável</label></td>
+                        <td><input tabindex="8" type="text" size="34" id="frmsoc" name="frmsoc"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="frmnat">Natureza Jurídica</label></td>
+                        <td><select tabindex="9" id="frmnat" name="frmnat" autocomplete="off" style="width: 275px;">
+                            <option value="" style="color:gray">Selecionar</option>
+                            <option value="EI">EI: Empresa Individual</option>
+                            <option value="MEI">MEI: Micro Empreendedor Individual</option>
+                            <option value="LTD">LTD: Sociedade Empresária Limitada</option>
+                            <option value="UNI">UNI: Sociedade Empresaria Unipessoal</option>
+                            <option value="SS">SS: Sociedade Simples</option>
+                            <option value="SA">SA: Sociedade Anonima</option>
+                            <option value="EPP">EPP: Empresa de Pequeno Porte</option>
+                            <option value="EMG">EMG: Empresa de Medio e Grande Porte</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td><label for="frmreg">Regime Tributário</label></td>
+                        <td><select tabindex="10" id="frmreg" name="frmreg" autocomplete="off" style="width: 275px;">
+                            <option value="" style="color:gray">Selecionar</option> 
+                            <option value="MEI">MEI: Micro Empreendedor Individual</option>
+                            <option value="SIM">SIM: Simples Nacional</option>
+                            <option value="LP">LP: Lucro Presumido</option>
+                            <option value="LR">LR: Lucro Real</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td><br><input tabindex="11" type="submit" value="Enviar">
+                        <input tabindex="12" type="reset" value="Limpar"/></td>
+                    </tr>
+                    </table>
+                </form>
+    </body>
+</html>
