@@ -1,8 +1,0 @@
-User-agent: GoogleBot
-Allow: /index.html
-Allow: /atendimento.html
-Allow: /portfolio_senai.html
-Allow: /formulario_contato.html
-User-agent: *
-Disallow: /curriculo.html
-Sitemap: http://marcosware.com.br/sitemap.xml
