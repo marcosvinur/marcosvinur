@@ -249,14 +249,18 @@
                 <p align="justify">Preencha os dados abaixo e envie sua mensagem:</p>
                         <form name="frm_ctt" id="frmctt" method="POST" action="http://localhost:3000/atendimento_r.php">
                             <label for="frm_nom" style="padding-right: 4.6%">Nome:</label>
-                            <input tabindex="1" type="text" size="30" name="frm_nom" id="frm_nom"><br>
+                            <input tabindex="1" type="text" size="30" name="frm_nom" id="frm_nom"
+                            disabled="disabled" title="Indisponível no momento." placeholder="Indisponível no momento."><br>
                             <label for="frm_tel">Telefone:</label>
-                            <input tabindex="2" type="text" size="30" name="frm_tel" id="frm_tel"><br>
+                            <input tabindex="2" type="text" size="30" name="frm_tel" id="frm_tel"
+                            disabled="disabled" title="Indisponível no momento." placeholder="Indisponível no momento."><br>
                             <label for="frm_mai" style="padding-right: 5.8%">Email:</label>
-                            <input tabindex="3" type="text" size="30" name="frm_mai" id="frm_mai"><br><br>
+                            <input tabindex="3" type="text" size="30" name="frm_mai" id="frm_mai"
+                            disabled="disabled" title="Indisponível no momento." placeholder="Indisponível no momento."><br><br>
                             <label for="txt_msg">Mensagem:</label><br>
                             <textarea tabindex="4" name="txt_msg" id="txt_msg" rows="7" cols="44"
-                            autocomplete="off" style="resize: none;"></textarea><br>
+                            autocomplete="off" style="resize: none;"
+                            disabled="disabled" title="Indisponível no momento." placeholder="Indisponível no momento."></textarea><br>
                             <input tabindex="5" type="submit" value="Enviar"
                             style="background-color: rgb(75, 0, 117); color: rgb(177, 177, 177); border-style: solid;"/>
                             <input tabindex="6" type="reset" value="Limpar"
@@ -273,15 +277,19 @@
                                 <img src="media/purple_x.png" alt="x_@marcosware_dev" width="50px" height="50px">
                             </a>
                         </div>
-                        <div class="socials1" style="top: 60%; right: 25%; position: absolute;">
+                        <div class="socials1" style="top: 60%; right: 5%; position: absolute;">
                             <a href="https://www.instagram.com/marcosware_dev" target="_blank">
                                 <img src="media/purple_instagram.png" alt="instagram_@marcosware_dev" width="80px" height="80px">
                             </a>
                         </div>
-                        <div class="socials2" style="top: 70%; right: 15%; position: absolute;">
+                        <div class="socials1" style="top: 70%; right: 15%; position: absolute;">
                             <a href="mailto:marcosware.dev@gmail.com" target="_blank">
                                 <img src="media/purple_email.png" alt="email_marcosware.dev@gmail.com" width="50px" height="50px">
                             </a>
+                            <div>
+                                <a href="mailto:marcosware.dev@gmail.com" target="_blank"
+                                style="color: rgb(75, 0, 117); font-size: medium;">marcosware.dev@gmail.com</a>
+                            </div>
                         </div>
                         <div class="socials2" style="top: 40%; right: 22.5%; position: absolute;">
                             <a href="https://www.github.com/marcosware" target="_blank">
