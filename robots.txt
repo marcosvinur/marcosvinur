@@ -1,0 +1,5 @@
+User-agent: GoogleBot
+Allow: /index.html
+User-agent: *
+Disallow: /atendimento_r.php
+Sitemap: http://marcosware.com.br/sitemap.xml
