@@ -64,7 +64,7 @@
             border-bottom: 2px solid rgb(75, 0, 117);
             overflow:hidden;
         }
-        .active{
+        .header button:active{
             background-color: rgb(75, 0, 117);
         }
         .header button:active{
@@ -165,8 +165,8 @@
             onclick="hide(curriculodiv), hide(cttdiv), hide(atendimentodiv), hide(portfoliodiv), show(iniciodiv)">
             <div class="navigation">
                 <button onclick="hide(curriculodiv), hide(cttdiv), hide(atendimentodiv), hide(portfoliodiv), show(iniciodiv)">Início</button>
-                <button class="sobreacc">Sobre</button>
-                <div class="sobreextra">
+                <button class="sobreacc" onclick="accordion(sobreextra)">Sobre</button>
+                <div class="sobreextra" id="sobreextra">
                     <button class="sobreex" onclick="hide(iniciodiv), hide(cttdiv), hide(atendimentodiv),
                     hide(portfoliodiv), show(curriculodiv)">Currículo</button>
                     <button class="sobreex" onclick="hide(iniciodiv), hide(cttdiv), hide(atendimentodiv),
@@ -175,24 +175,17 @@
                     onclick="hide(iniciodiv), hide(cttdiv), hide(curriculodiv), hide(portfoliodiv), show(atendimentodiv)">Atendimento</button>
                 </div>
                 <script>
-                    var acc = document.getElementsByClassName("sobreacc");
-                    var i;
-                    for (i = 0; i < acc.length; i++) {
-                      acc[i].addEventListener("click", function() {
-                        var sobreextra = this.nextElementSibling;
-                        if (sobreextra.style.display === "block") {
-                            sobreextra.style.display = "none";
+                        function accordion(id){
+                        if (id.style.display === "block") {
+                            id.style.display = "none";
                         } else {
-                            sobreextra.style.display = "block";
+                            id.style.display = "block";
                         }
-                      });
                     }
-                    </script>
-                <script>
-                    function hide(id) {
+                        function hide(id) {
                         id.style.display="none";
                     }
-                    function show(id) {
+                        function show(id) {
                         id.style.display="block";
                     }
                 </script>
