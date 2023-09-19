@@ -10,10 +10,6 @@
         body{
             overflow-x: hidden;
         }
-        .dark {
-            font-size: 32pt;
-            background-color: #000000;
-        }
         .hoverhid{
             display: none;
             position: absolute;
@@ -157,6 +153,7 @@
             overflow-x: hidden;
         }
     </style>
+    <script src="scripts.js"></script>
     <body style="background-color:black;font-family: 'Agdasima'">
         <div class="header">
             <img src="media/logo/logo_marcosware_blank.png" width="3%" height="3%" style="float:left; cursor:pointer; padding-top: 0.5%;"
@@ -174,21 +171,6 @@
                     <button class="sobreex" style="text-align: center; padding-right: 1%; padding-left: 1%;"
                     onclick="hide(iniciodiv), hide(cttdiv), hide(curriculodiv), hide(portfoliodiv), show(atendimentodiv)">Atendimento</button>
                 </div>
-                <script>
-                        function accordion(id){
-                        if (id.style.display === "block") {
-                            id.style.display = "none";
-                        } else {
-                            id.style.display = "block";
-                        }
-                    }
-                        function hide(id) {
-                        id.style.display="none";
-                    }
-                        function show(id) {
-                        id.style.display="block";
-                    }
-                </script>
                 <button onclick="hide(curriculodiv), hide(iniciodiv), hide(atendimentodiv), hide(portfoliodiv), show(cttdiv)">Contato</button>
             </div>
         </div>
