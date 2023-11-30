@@ -2,8 +2,7 @@ var newScript = document.createElement("script");
 newScript.type = "text/javascript";
 newScript.setAttribute("async", "true");
 
-newScript.setAttribute("src", "https://www.googletagmanager.com/gtag/js?id=G-
-VGP215QVXJ");
+newScript.setAttribute("src", "https://www.googletagmanager.com/gtag/js?id=G-VGP215QVXJ");
 
 document.documentElement.firstChild.appendChild(newScript);
 // Executando a funcao gtag(), que esta disponivel no script acima
