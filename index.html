@@ -9,6 +9,10 @@
     <style>
         body{
             overflow-x: hidden;
+            background-color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+            Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            transition: .25s;
         }
         .hoverhid{
             display: none;
@@ -21,114 +25,69 @@
         table{
             empty-cells: show;
         }
-        .header{
-            background-color: black;
+        .tabs{
             overflow: hidden;
-            padding: 10px 30px;
-            margin: -0.6%;
-            border-bottom: 2px solid rgb(75, 0, 117);
-            top: 0;
-        }
-        .header button{
-            color: rgb(177, 177, 177);
-            background-color: black;
-            text-align: center;
-            font-size: 16px;
-            line-height: 26px;
-            float: left;
-            padding: 12px;
-            text-decoration: none;
-            border: 2px solid black;
-            transition: .25s;
-            cursor: pointer;
-        }
-        .header button.logo{
-            color: rgb(75, 0, 117);
-            font-size: 24px;
-            text-shadow: 1px 2px 4px rgb(0, 0, 0);
-            font-weight: bold;
-            transition: none;
-            border-bottom: 0px none black;
-            padding-left: 0px;
-            padding-right: 0px;
-        }
-        .header button:hover{
-            transition: .25s;
-            transition-timing-function: linear;
-            padding-right: 30px;
-            padding-left: 30px;
-            border-bottom: 2px solid rgb(75, 0, 117);
-            overflow:hidden;
-        }
-        .header button:focus{
-            background-color: rgb(75, 0, 117);
-            border-bottom: 2px solid rgb(75, 0, 117);
-            padding-right: 30px;
-            padding-left: 30px;
-        }
-        .header button:active{
-            transition: 0s;
-            background-color: rgb(75, 0, 117);
-        }
-        .header button.logo:hover{
-            color: white;
-            text-shadow: 1px 2px 4px rgb(75, 0, 117);
-            background-color: black;
-            border-bottom: 0px none black;
-            transition: none;
-            padding-left: 0px;
-            padding-right: 0px;
+            margin-top: 20px;
         }
         .navigation{
             float: right;
-        }
-        .sobreacc{
-            background-color: rgb(75, 0, 117);
-            transition: 0.4s;
-        }
-        .header button.sobreex{
-            background-color: rgb(75, 0, 117);
-            color: rgb(177, 177, 177);
-            text-align: center;
-            font-size: 16px;
-            line-height: 26px;
-            width: 100px;
-            padding: 12px;
-            text-decoration: none;
-            cursor: pointer;
-            position: relative;
-        }
-        .header button.sobreex:hover{
-            transition: .25s;
-            transition-timing-function: linear;
-            padding-right: 1%;
-            padding-left: 1%;
-            border: 2px solid rgb(177, 177, 177);
-            overflow: hidden;
-        }
-        .sobreextra{
-            cursor: pointer;
-            overflow: hidden;
-            display: none;
-            max-width: min-content;
-            position: absolute;
-            right: 120px;
-            top: 70px;
-            z-index: 1000;
-        }
-        .iniciodiv{
-            color: rgb(75, 0, 117);
+            margin-right: 5%;
         }
         .marcosware{
-            color: rgb(75, 0, 117);
-            font-size: 128px;
-            text-shadow: 3px 6px 12px rgb(3, 0, 5);
+            font-size: 50px;
             font-weight: bold;
             text-align: center;
-            padding-top: 2.7%;
+            float: left;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        #mw1{
+            transform: rotate(-7.5deg);
+            z-index: 4;
+            padding-left: 120px;
+        }
+        #mw2{
+            transform: rotate(-3.5deg);
+            color: #6C30F5;
+            z-index: 3;
+            margin-left: -250px;
+        }
+        #mw3{
+            transform: rotate(5deg);
+            color: #31f549;
+            z-index: 2;
+            padding-left: 80px;
+            margin-left: -350px;
+        }
+        .iniciodiv{
+            color: #6C30F5;
+        }
+        .title{
+            font-size: 7vw;
+            font-weight: bold;
+            border-left-width: 100px;
+            border-top-width: 3px;
+            border-style: solid;
+            border-color: white;
+            padding-bottom: 125px;
+            transition: .25s;
+            opacity: 0;
+            animation: fadeIn 2s linear 1s infinite alternate;
+        }
+        .big-image{
+            padding-left: 200px;
+            width: 300px;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @keyframes fadeOut {
+            0% { opacity: 1;}
+            100% { opacity: 0; }
         }
         .common{
-            color: rgb(177, 177, 177);
+            color: rgb(9, 9, 9);
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
             Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size: 24px;
@@ -141,221 +100,55 @@
             overflow-x: hidden;
             overflow-y: hidden;
         }
-        .socials1{
-            float: right;
-            padding-top: 1%;
-            padding-right: 3%;
-            transform:rotate(30deg);
-            overflow-x: hidden;
+        .dark-mode {
+            background-color: black;
+            border-color: black;
+            color: white;
+            transition: .25s;
         }
-        .socials2{
-            float: right;
-            padding-top: 1%;
-            padding-right: 3%;
-            transform:rotate(-30deg);
-            overflow-x: hidden;
+        @keyframes lister{
+            from { padding-bottom: 0px; }
+            to { padding-bottom: 15px; }
+            from { font-size: 12px; }
+            to { font-size: 28px; }
+        }
+        button {
+            background-color: rgba(255, 255, 255, 0);
+            color: black;
+            border-style: none;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+            Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 24px;
         }
     </style>
     <script src="scripts.js"></script>
-    <body style="background-color:black;font-family: 'Agdasima'">
-        <div class="header">
-            <img src="media/logo/logo_marcosware_blank.png" width="3%" height="3%" style="float:left; cursor:pointer; padding-top: 0.5%;"
-            onmouseover="this.src='media/logo/logo_marcosware_fill_w.png';"
-            onmouseout="this.src='media/logo/logo_marcosware_blank.png';"
-            onclick="hide(curriculodiv), hide(cttdiv), hide(atendimentodiv), hide(portfoliodiv), show(iniciodiv)">
-            <div class="navigation">
-                <button onclick="hide(curriculodiv), hide(cttdiv), hide(atendimentodiv), hide(portfoliodiv), show(iniciodiv)">Início</button>
-                <button class="sobreacc" onclick="accordion(sobreextra)">Sobre</button>
-                <div class="sobreextra" id="sobreextra">
-                    <button class="sobreex" onclick="hide(iniciodiv), hide(cttdiv), hide(atendimentodiv),
-                    hide(portfoliodiv), show(curriculodiv), accordion(sobreextra)">Currículo</button>
-                    <button class="sobreex" onclick="hide(iniciodiv), hide(cttdiv), hide(atendimentodiv),
-                    hide(curriculodiv), show(portfoliodiv), accordion(sobreextra)">Portfólio: SENAI</button>
-                    <button class="sobreex" style="text-align: center; padding-right: 1%; padding-left: 1%;"
-                    onclick="hide(iniciodiv), hide(cttdiv), hide(curriculodiv),
-                    hide(portfoliodiv), accordion(sobreextra), show(atendimentodiv)">Atendimento</button>
-                </div>
-                <button onclick="hide(curriculodiv), hide(iniciodiv), hide(atendimentodiv),
-                hide(portfoliodiv), show(cttdiv)">Contato</button>
-            </div>
-        </div>
+    <body>
         <div class="tabs">
             <div id="iniciodiv">
-            <div class="marcosware"><img src="media/logo_marcosware_blank.png" width="10%" height="10%">arcosware</div>
-            <div style="font-size: 42px; padding-top: -20px; text-align: center; color: rgb(75, 0, 117)">Desenvolvimento Web</div>
-            <div class="common">Seja bem-vindo ao meu website. Meu nome é Marcos Vinícius e sou um desenvolvedor web.
-            Navegue pelo site e conheça um pouco sobre o meu trabalho.<br><br>Siga minhas redes sociais e fique por dentro das novidades:
-            <div class="socials1">
-                <a href="https://www.linkedin.com/in/marcosware" target="_blank">
-                    <img src="media/purple_linkedin.png" alt="linkedin_@marcosware" width="80px" height="80px">
-                </a>
+                <div class="marcosware" id="mw1">Marcosware</div>
+                <div class="marcosware" id="mw2">Marcosware</div>
+                <div class="marcosware" id="mw3">Marcosware</div>
+                <button onclick="darkMode()" id="darkbut">Zzz...</button>
             </div>
-            <div class="socials2">
-                <a href="https://www.x.com/marcosware_dev" target="_blank">
-                    <img src="media/purple_x.png" alt="x_@marcosware_dev" width="50px" height="50px">
-                </a>
+            <div style="float: right;">
+                Contato: <a href="mailto:marcosware.dev@gmail.com" target="_blank">marcosware.dev@gmail.com</a>
             </div>
-            <div class="socials1">
-                <a href="https://www.instagram.com/marcosware_dev" target="_blank">
-                    <img src="media/purple_instagram.png" alt="instagram_@marcosware_dev" width="80px" height="80px">
-                </a>
-            </div>
-            <div class="socials2">
-                <a href="mailto:marcosware.dev@gmail.com" target="_blank">
-                    <img src="media/purple_email.png" alt="email_marcosware.dev@gmail.com" width="50px" height="50px">
-                </a>
-            </div>
-            <div id="perfilid">
-
-            </div>
-        </div> <!-- common-->
-            </div> <!-- iniciodiv-->
-            <div id="curriculodiv" style="display: none; overflow: hidden;">
-                <div class="common" style="margin-top: -5%;">
-                <h3 style="color: rgb(75, 0, 117);"><b>Marcos Vinícius</b></h3>
-                <b>Contato: </b><a href="mailto:marcosware.dev@gmail.com" style="text-decoration: none; color: rgb(177, 177, 177)">
-                marcosware.dev@gmail.com</a> - <a href="https://marcosware.github.io"
-                style="text-decoration: none; color: rgb(177, 177, 177)">https://marcosware.github.io</a><br><br>
-                Belo Horizonte/MG<br><br>
-                <b>Competências: </b><br>Inglês Intermediário<br>
-                Desenvolvimento Web Full-Stack
-                <ul><li>HTML, CSS, JavaScript, PHP</li></ul>
-                Banco de Dados MySQL
-                <br>
-                Design Gráfico e Edição de Imagens 
-                <ul>
-                    <li>GIMP</li>
-                    <li>Aseprite</li>
-                    <li>Paint.NET</li>
-                </ul>
-                Redes de Computadores
-                <ul>
-                    <li>Montagem de Computadores</li>
-                    <li>Cabeamento Estruturado e Crimpagem</li>
-                    <li>Manutenção Preventiva e Resolução de Problemas</li>
-                    <li>Instalação de Softwares e Sistemas Operacionais</li>
-                    <li>Configuração e Roteamento de Redes</li>
-                </ul>
-                </div>
-                <b>Formação: </b><br>Escola Estadual Maestro Villa Lobos - Ensino Médio Completo<br>
-                <b>SENAI CTTI</b> - Aprendizagem de Programação Web - <b>802,50hs</b><br></span>
-                <i><sup>FEVEREIRO DE 2023 - DEZEMBRO DE 2023</sup></i><br><br>
-                 <!-- common-->
-            </div> <!--curriculodiv-->
-            <div id="cttdiv" style="display: none; overflow: hidden;">
-                <div class="common" style="margin-top: -5%;">
-                <h1 align="center" style="color:rgb(75, 0, 117)">Formulário de Contato</h1>
-                <p align="justify">Preencha os dados abaixo e envie sua mensagem:</p>
-                        <form name="frm_ctt" id="frmctt" method="POST" action="http://localhost:3000/atendimento_r.php">
-                            <label for="frm_nom" style="padding-right: 4.6%">Nome:</label>
-                            <input tabindex="1" type="text" size="30" name="frm_nom" id="frm_nom"
-                            disabled="disabled" title="Indisponível no momento." placeholder="Indisponível no momento."><br>
-                            <label for="frm_tel">Telefone:</label>
-                            <input tabindex="2" type="text" size="30" name="frm_tel" id="frm_tel"
-                            disabled="disabled" title="Indisponível no momento." placeholder="Indisponível no momento."><br>
-                            <label for="frm_mai" style="padding-right: 5.8%">Email:</label>
-                            <input tabindex="3" type="text" size="30" name="frm_mai" id="frm_mai"
-                            disabled="disabled" title="Indisponível no momento." placeholder="Indisponível no momento."><br><br>
-                            <label for="txt_msg">Mensagem:</label><br>
-                            <textarea tabindex="4" name="txt_msg" id="txt_msg" rows="7" cols="44"
-                            autocomplete="off" style="resize: none;"
-                            disabled="disabled" title="Indisponível no momento." placeholder="Indisponível no momento."></textarea><br>
-                            <input tabindex="5" type="submit" value="Enviar"
-                            style="background-color: rgb(75, 0, 117); color: rgb(177, 177, 177); border-style: solid;"/>
-                            <input tabindex="6" type="reset" value="Limpar"
-                            style="background-color: rgb(75, 0, 117); color: rgb(177, 177, 177); border-style: solid;"/>
-                        </form>
-                        <div style="top: 31.8%; right: 5%; position: absolute;">Ou acompanhe minhas redes sociais:</div>
-                        <div class="socials1" style="top: 40%; right: 5%; position: absolute;">
-                            <a href="https://www.linkedin.com/in/marcosware" target="_blank">
-                                <img src="media/purple_linkedin.png" alt="linkedin_@marcosware" width="80px" height="80px">
-                            </a>
-                        </div>
-                        <div class="socials2" style="top: 50%; right: 15%; position: absolute;">
-                            <a href="https://www.x.com/marcosware_dev" target="_blank">
-                                <img src="media/purple_x.png" alt="x_@marcosware_dev" width="50px" height="50px">
-                            </a>
-                        </div>
-                        <div class="socials1" style="top: 60%; right: 5%; position: absolute;">
-                            <a href="https://www.instagram.com/marcosware_dev" target="_blank">
-                                <img src="media/purple_instagram.png" alt="instagram_@marcosware_dev" width="80px" height="80px">
-                            </a>
-                        </div>
-                        <div class="socials1" style="top: 70%; right: 15%; position: absolute;">
-                            <a href="mailto:marcosware.dev@gmail.com" target="_blank">
-                                <img src="media/purple_email.png" alt="email_marcosware.dev@gmail.com" width="50px" height="50px">
-                            </a>
-                            <div>
-                                <a href="mailto:marcosware.dev@gmail.com" target="_blank"
-                                style="color: rgb(75, 0, 117); font-size: medium;">marcosware.dev@gmail.com</a>
-                            </div>
-                        </div>
-                        <div class="socials2" style="top: 40%; right: 22.5%; position: absolute;">
-                            <a href="https://www.github.com/marcosware" target="_blank">
-                                <img src="media/purple_github.png" alt="github_marcosware" width="65px" height="65px">
-                            </a>
-                        </div>
-                </div> <!--common-->
-            </div> <!--cttdiv-->
-            <div id="portfoliodiv" style="display:none;">
-                <div class="common" style="margin-top: -5%">
-                <h3 style="color: rgb(75, 0, 117);"><b>Portfólio: SENAI</b></h3>
-                Trabalhos redigidos:<br>
-                <a href="media/FCI - Comunicação no Trabalho.pdf" target="_blank" style="color: rgb(75, 0, 117)">A Importância da Comunicação no Ambiente de Trabalho</a><br><br>
-                <a href="media/RLA - Processo Seletivo.pdf" target="_blank" style="color: rgb(75, 0, 117)">Análise do Processo Seletivo</a><br><br>
-                <a href="media/Boletim - Vale do Lítio.pdf" target="_blank" style="color: rgb(75, 0, 117)">Boletim Informativo Biblioteca 4.0: Vale do Lítio</a><br>
-                <sup style="font-size: small; color: rgb(177, 177, 177);">Disponível em: 
-                    <a href=https://sway.office.com/AfbnVsvJR5ItCwoD target="_blank" 
-                    style="color: rgb(177, 177, 177); text-decoration:none;">https://sway.office.com/AfbnVsvJR5ItCwoD</a></sup>
-                </div> <!--common-->
-            </div> <!--portfoliodiv-->
-            <div id="atendimentodiv" style="display: none;">
-                <div class="common" style="margin-top: -5%;">
-                    <h3 style="color: rgb(75, 0, 117);"><b>Política de Atendimento</b></h3>
-                    <b><u>Horário</u></b><br>
-                    Horário de trabalho: de 07:00 às 15:00, de segundas às sextas.<br>
-                    Atendo urgências se em nosso contrato de trabalho estiver previamente combinado.<br><br>
-                    <b><u>Preços</u></b><br>
-                    Valor: R$18,00/h<br>
-                    Valor fixo com mensalidade à combinar.<br>
-                    Em caso de urgências, o dobro do valor é cobrado.<br><br>
-                    <b><u>Critérios</u></b><br>
-                    NÃO irei desenvolver:<br>
-                    Sites pornográficos ou de teor sexual.<br>
-                    Sites que denigrem ou ferem a integridade de outras pessoas.
-                </div> <!-- common-->
-            </div> <!-- atendimentodiv-->
-        </div> <!-- tabs-->
-    </body>
-<!--
-    <body style="background-color:#B855EB;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
-        <audio controls autoplay style="float:left"><source src="imgs/Scattle - It's Safe Now.mp3" type="audio/mp3">Seu navegador não suporta o elemento de áudio.</audio>
-        <div align="center" style="font-size:48pt;text-shadow: 5px 4px black;color:purple"><u><i><b>Marcosware</b></i></u></div><br>
-            <table cellpadding="15">
+        </div>
+        <div>
+        <section id="sobre" class="sobre">
+            <table>
                 <tr>
-                    <td> <p style="font-size: 24pt; color:black; float: left" align="justify"><font style="font-size:40pt;vertical-align: bottom;"><b>Falaí!</b></font>&nbsp;&nbsp;<img src="imgs/yo.png"><br>Seja bem-vindo à minha página.<br><br>Sou um desenvolvedor web e disponibilizei <br>esta página inicialmente como uma prática <br>de um curso que fiz.<br> Fique à vontade para acessar meus trabalhos<br>anteriores ou entrar em contato comigo.<br> Navegue pelo site pelas opçãos ao lado</p>
+                    <td>
+                        <div class="big-image">
+                            <img src="media/logo/logo_marcosware_blank2.png" style="width: 100%;">
+                        </div>
                     </td>
                     <td>
-                        <table align="center" style="float: right">
-                            <tbody>
-                                <tr>
-                                    <td align="center"><div class="dark hovered" style="z-index: 1"><a href="curriculo.html" target="_blank" style="color:purple;text-decoration:none;text-shadow: 1px 1px black">Currículo</a><br><br></div>
-                                        <div class="hoverhid" style="z-index: 2"><img src="imgs/Curriculo.png"><br></div></td>
-                                    <td align="center"><div class="dark hovered" style="z-index: 1"><a href="atendimento.html" target="_blank" style="color:purple;text-decoration:none;text-shadow: 1px 1px black">Atendimento</a><br><br></div>
-                                        <div class="hoverhid" style="z-index: 2"><img src="imgs/Atendimento.png"><br></div></td>
-                                </tr>
-                                <tr>
-                                    <td align="center"><div class="dark hovered" style="z-index: 1"><a href="portfolio_senai.html" target="_blank" style="color:purple;text-decoration:none;text-shadow: 1px 1px black">Portfólio SENAI</a><br><br></div>
-                                        <div class="hoverhid" style="z-index: 2"><img src="imgs/Portfolio.png"><br></div></td>
-                                    <td align="center"><div class="dark hovered" style="z-index: 1"><a href="frm_ctt.html" target="_blank" style="color:purple;text-decoration:none;text-shadow: 1px 1px black">Contato</a><br><br></div>
-                                        <div class="hoverhid" style="z-index: 2"><img src="imgs/Contato.png"><br></div></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="title" id="teste"><br>Em<br><font style="color:#6C30F5">manu</font><font style="color:#31f549">tenção</font></div>
                     </td>
-                </tr>
-            </table>
-        </ul>
-    </body> -->
-    <script type="text/javascript" src="analytics.js"></script>
+        </section>
+        </div>    
+            <section id="contato" class="contato">
+                
+            </section>
 </html>
